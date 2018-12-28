@@ -1,0 +1,41 @@
+<DOCTYPE !html> 
+<html>
+<head>  
+             <meta charset="utf-8"/>
+             <link rel="stylesheet" />
+            <title> Citation : le paradis sur la terre </title>
+         </head>
+        <body>
+			<form>
+				<p>entrer un nombre entre 1 et 100</p>
+				<input id="he" type="tel" value="1"/>
+				<input id="envoyer" type="button" value="send"/>
+			</form>
+			<p id="yournumber">votre nombre : </p>
+			<script>
+				function entierAleatoire(min, max){
+                       return Math.floor(Math.random() * (max - min + 1)) + min;
+                       }
+				numberss = entierAleatoire(1,100);
+				console.log(numberss);
+				function aksyon(){
+					if(!isNaN(num.value))
+					{if(num.value < numberss)
+							par.innerHTML= " votre nombre ," + num.value + " est inferieur";
+					if(num.value > numberss)
+						par.innerHTML= " votre nombre ," + num.value + " est superieur";
+					if(num.value == numberss)
+						par.innerHTML= "BRAVO ";}
+					else
+						par.innerHTML="vous n'avez pas rentrer un nombre";
+				}
+				
+				klik = document.getElementById('envoyer');
+				num = document.getElementById('he');
+				par = document.getElementById('yournumber');
+				
+				  klik.addEventListener('click',aksyon,false);
+				
+			</script>
+	 </body>
+	</html>
